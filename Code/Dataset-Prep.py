@@ -4,13 +4,6 @@ import cv2
 import numpy as np
 import hashlib
 import time
-import matplotlib.pyplot as plt
-
-def show_image(image, figsize=(7,7), cmap=None):
-    cmap = cmap if len(image.shape)==3 else 'gray'
-    plt.figure(figsize=figsize)
-    plt.imshow(image, cmap=cmap)
-    plt.show()
 
 def AdaptiveThresh(gray):
     blur = cv2.medianBlur(gray, 5)
@@ -164,8 +157,6 @@ for root, dirs, files in os.walk('./Documents'):
 
                 tile_height = height // rows
                 tile_width = width // cols
-
-                fig, axes = plt.subplots(rows, cols, figsize=(10, 10))
 
                 images = []
 
