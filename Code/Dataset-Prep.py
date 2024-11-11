@@ -171,7 +171,7 @@ for root, dirs, files in os.walk('./Documents'):
                         sub_image_gray = cv2.cvtColor(sub_image, cv2.COLOR_BGR2GRAY)
                         sub_image_binary = cv2.threshold(sub_image_gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
                         sub_image_binary_inv = 255 - sub_image_binary
-                        final = cv2.resize(sub_image_binary_inv, (50, 50))
+                        final = cv2.resize(sub_image_binary_inv, (75, 75))
 
                         images.append(final)
 
